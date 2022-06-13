@@ -20,16 +20,6 @@ public class CharacterMoveController : MonoBehaviour
         0.0f, maxSpeed);
         rig.velocity = velocityVector;
     }
-    void Update()
-    {
-    }
-}
-
-// Start is called before the first frame update
-void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
