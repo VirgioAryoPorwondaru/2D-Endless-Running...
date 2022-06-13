@@ -488,7 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a61ad98f0f60c34499b02e5c82835b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1558222563}
   horizontalOffset: 0
 --- !u!1 &616694249
 GameObject:
@@ -1573,12 +1573,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveAccel: 2
-  maxSpeed: 4.12
+  maxSpeed: 2
   jumpAccel: 7
   groundRaycastDistance: 1.2
   groundLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
 --- !u!95 &1558222568
 Animator:
   serializedVersion: 4

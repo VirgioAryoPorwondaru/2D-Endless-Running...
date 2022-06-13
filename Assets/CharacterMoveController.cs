@@ -17,10 +17,13 @@ public class CharacterMoveController : MonoBehaviour
     public float groundRaycastDistance;
     public LayerMask groundLayerMask;
     private bool isOnGround;
+    private Animator anim;
+    
 
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -33,6 +36,7 @@ public class CharacterMoveController : MonoBehaviour
                 isJumping = true;
             }
         }
+        anim.SetBool("isOnGround", isOnGround);
     }
 
    
