@@ -18,12 +18,14 @@ public class CharacterMoveController : MonoBehaviour
     public LayerMask groundLayerMask;
     private bool isOnGround;
     private Animator anim;
-    
+    private CharacterSoundController sound;
+
 
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        sound = GetComponent<CharacterSoundController>();
     }
 
     void Update()
@@ -34,6 +36,7 @@ public class CharacterMoveController : MonoBehaviour
             if (isOnGround)
             {
                 isJumping = true;
+                sound.PlayJump();
             }
         }
         anim.SetBool("isOnGround", isOnGround);
