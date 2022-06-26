@@ -14,11 +14,4 @@ public class CameraMoveController : MonoBehaviour
         newPosition.x = player.position.x + horizontalOffset;
         transform.position = newPosition;
     }
-
-// Start is called before the first frame update
-void Start()
-    {
-        
-    }
-
 }

@@ -10,9 +10,15 @@ public class CharacterSoundController : MonoBehaviour
     {
         audioPlayer = GetComponent<AudioSource>();
     }
+
     public void PlayJump()
     {
         audioPlayer.PlayOneShot(jump);
     }
-}
 
+    //Update is called once per frame
+    void Update()
+    {
+
+    }
+}
