@@ -133,24 +133,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3345561066691976579, guid: e6e89694c0493664ea72d0eac2ecb8b6, type: 3}
   m_PrefabInstance: {fileID: 1473031775}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &116863183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 116863181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cc2b39f7c46bf04a91a215407a04407, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  terrainTemplates:
-  - {fileID: 992308800}
-  terrainTemplateWidth: 1
-  gameCamera: {fileID: 519420031}
-  areaStartOffset: -10
-  areaEndOffset: 5
 --- !u!114 &116863184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,24 +274,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2bef1b8a0d3ec94987eea939c8dc3ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &992308801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 992308798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cc2b39f7c46bf04a91a215407a04407, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  terrainTemplates:
-  - {fileID: 992308800}
-  terrainTemplateWidth: 1
-  gameCamera: {fileID: 519420031}
-  areaStartOffset: -10
-  areaEndOffset: 5
 --- !u!1 &1419125018 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3638771615266670158, guid: e6e89694c0493664ea72d0eac2ecb8b6, type: 3}
@@ -320,24 +284,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3345561066691976579, guid: e6e89694c0493664ea72d0eac2ecb8b6, type: 3}
   m_PrefabInstance: {fileID: 2087898464}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1419125020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1419125018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cc2b39f7c46bf04a91a215407a04407, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  terrainTemplates:
-  - {fileID: 992308800}
-  terrainTemplateWidth: 1
-  gameCamera: {fileID: 519420031}
-  areaStartOffset: -10
-  areaEndOffset: 5
 --- !u!114 &1419125021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,9 +418,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3638771615266670158, guid: e6e89694c0493664ea72d0eac2ecb8b6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 116863184}
-    - targetCorrespondingSourceObject: {fileID: 3638771615266670158, guid: e6e89694c0493664ea72d0eac2ecb8b6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 116863183}
   m_SourcePrefab: {fileID: 100100000, guid: e6e89694c0493664ea72d0eac2ecb8b6, type: 3}
 --- !u!1 &1558222561
 GameObject:
@@ -798,6 +741,7 @@ GameObject:
   - component: {fileID: 1811976117}
   - component: {fileID: 1811976116}
   - component: {fileID: 1811976115}
+  - component: {fileID: 1811976118}
   m_Layer: 8
   m_Name: Ground Container
   m_TagString: Untagged
@@ -951,6 +895,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1811976118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811976113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cc2b39f7c46bf04a91a215407a04407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrainTemplates:
+  - {fileID: 992308800}
+  terrainTemplateWidth: 1
+  gameCamera: {fileID: 519420031}
+  areaStartOffset: -10
+  areaEndOffset: 5
 --- !u!1001 &2087898464
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1101,9 +1063,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3638771615266670158, guid: e6e89694c0493664ea72d0eac2ecb8b6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1419125021}
-    - targetCorrespondingSourceObject: {fileID: 3638771615266670158, guid: e6e89694c0493664ea72d0eac2ecb8b6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1419125020}
   m_SourcePrefab: {fileID: 100100000, guid: e6e89694c0493664ea72d0eac2ecb8b6, type: 3}
 --- !u!1001 &7316938506683593053
 PrefabInstance:
@@ -1224,7 +1183,4 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3638771615266670158, guid: e6e89694c0493664ea72d0eac2ecb8b6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 992308800}
-    - targetCorrespondingSourceObject: {fileID: 3638771615266670158, guid: e6e89694c0493664ea72d0eac2ecb8b6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 992308801}
   m_SourcePrefab: {fileID: 100100000, guid: e6e89694c0493664ea72d0eac2ecb8b6, type: 3}
