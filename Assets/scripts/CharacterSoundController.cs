@@ -6,6 +6,7 @@ public class CharacterSoundController : MonoBehaviour
 {
     public AudioClip jump;
     private AudioSource audioPlayer;
+    public AudioClip scoreHighlight;
     private void Start()
     {
         audioPlayer = GetComponent<AudioSource>();
@@ -16,8 +17,13 @@ public class CharacterSoundController : MonoBehaviour
         audioPlayer.PlayOneShot(jump);
     }
 
-    //Update is called once per frame
-    void Update()
+    public void PlayScoreHighlight()
+    {
+        audioPlayer.PlayOneShot(scoreHighlight);
+    }
+    
+        //Update is called once per frame
+        void Update()
     {
 
     }

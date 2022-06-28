@@ -12,6 +12,7 @@ public class CharacterMoveController : MonoBehaviour
         [Header("Jump")]
         public float jumpAccel;
         private bool isJumping;
+        private float jumpAmount = 10;
 
         [Header("Ground Raycast")]
         public float groundRaycastDistance;
@@ -55,7 +56,7 @@ public class CharacterMoveController : MonoBehaviour
         {
             if (isOnGround)
             {
-                isJumping = true;
+                rig.AddForce(Vector2.up * jumpAmount, ForceMode2D.Impulse);
                 sound.PlayJump();
             }
         }

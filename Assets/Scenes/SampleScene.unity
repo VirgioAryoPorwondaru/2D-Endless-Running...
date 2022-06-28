@@ -241,6 +241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a099e3f60a8234898a30d76201cd94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreHighlightRange: 0
+  sound: {fileID: 0}
 --- !u!4 &290834664
 Transform:
   m_ObjectHideFlags: 0
@@ -1454,6 +1456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jump: {fileID: 8300000, guid: 6b2885b07b797b847b7d990ef2a2f8c7, type: 3}
+  scoreHighlight: {fileID: 8300000, guid: a3856c662b1798e4a8368318d98d1a8f, type: 3}
 --- !u!114 &1558222571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1475,7 +1478,7 @@ MonoBehaviour:
     m_Bits: 256
   score: {fileID: 290834663}
   scoringRatio: 2
-  fallPositionY: -20
+  fallPositionY: -100
   gameOverScreen: {fileID: 1504170240}
   gameCamera: {fileID: 519420033}
 --- !u!82 &1558222572
