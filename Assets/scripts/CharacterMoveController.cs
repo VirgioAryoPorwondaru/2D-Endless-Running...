@@ -27,23 +27,36 @@ public class CharacterMoveController : MonoBehaviour
             anim = GetComponent<Animator>();
             sound = GetComponent<CharacterSoundController>();
         }
+    [Header("Scoring")]
+    public ScoreController score;
+    public float scoringRatio;
+    private float lastPositionX;
 
-        void Update()
+    void Update()
         {
-            // read input
-            if (Input.GetMouseButtonDown(0))
+        // read input
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (isOnGround)
             {
-                if (isOnGround)
-                {
-                    isJumping = true;
-                    sound.PlayJump();
-                }
+                isJumping = true;
+                sound.PlayJump();
             }
-            anim.SetBool("isOnGround", isOnGround);
+        }
+        // change animation
+        anim.SetBool("isOnGround", isOnGround);
+        // calculate score
+        int distancePassed = Mathf.FloorToInt(transform.position.x - lastPositionX);
+        int scoreIncrement = Mathf.FloorToInt(distancePassed / scoringRatio);
+        if (scoreIncrement > 0)
+        {
+            score.IncreaseCurrentScore(scoreIncrement);
+            lastPositionX += distancePassed;
+        }
         }
 
 
-        private void FixedUpdate()
+    private void FixedUpdate()
         {
             // raycast ground
             RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down,
